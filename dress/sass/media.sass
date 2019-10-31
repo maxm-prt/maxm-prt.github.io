@@ -26,7 +26,7 @@
 	
 	.item
 		// width: col(3)
-		min-width: 200px
+		// min-width: 200px
 		
 	.what-in-box
 		/* .what-in-box__main */
@@ -46,26 +46,36 @@
 			margin: 0 auto
 		/* .what-in-box__item */
 		&__b-left 
-			flex-basis: col(4)
+			order: 2
+			width: col(6)
+			min-width: 300px
 			& .what-in-box__item
-				text-align: right
-				align-items: flex-end
+				text-align: center
+				align-items: center
 
 		&__b-center 
-			flex-basis: col(3)
-			margin: 0 auto
+			width: 100%
+			order: 1
 			& .what-in-box__item
-
+		& .img-responsive
+			margin: auto
 		&__b-right 
-			flex-basis: col(4)
+			order: 2
+			width: col(6)
+			min-width: 300px
 			& .what-in-box__item
-				text-align: left
-				align-items: flex-start
+				text-align: center
+				align-items: center
+		&__item
+			margin: auto
 		& .what-in-box__item
 			padding: 25px
 			&:hover
 				padding: 23px
 				border: 2px solid #e72867
+	.delivery
+		&__content
+			display: block
 
 
 /* Small Devices, Tablets */
@@ -93,8 +103,64 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
+@media only screen and (max-width : 580px)
 	/**/
+	main>div
+		margin-top: 30px
+		margin-bottom: 30px
+	.two-section
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		height: auto
+		min-height: 500px
+		text-align: center 
+		overflow: hidden
+		&_revers
+			flex-direction: column
+			& .two-section__content
+				text-align: center 
+
+		/* .two-section__img */
+		&__img
+			flex-basis: col(12)
+		/* .two-section__content */
+		&__content
+			flex-basis: col(12)
+			padding-left: 50px
+			padding-right: 50px
+			text-align: center
+		/* .two-section__title */
+		&__title
+			font-size: 45px
+			@include padding-two-block-content(20px)
+		/* .two-section__sign */
+		&__sign
+			font-family: "Corinthia", "ProximaNova", sans-serif
+			font-size: 44px
+			color: #ff5b97
+			@include padding-two-block-content(20px)
+		/* .two-section__text */
+		&__text
+			font-size: 16px
+			font-weight: 200
+			@include padding-two-block-content(20px)
+			&-padding
+				padding-bottom: 0px
+		/* .two-section__button */
+		&__button
+			font-family: "ProximaNova"
+			font-size: 12px
+			font-weight: 700
+			padding: 15px 20px
+			border: 1px solid #333
+			text-transform: uppercase
+			background: transparent
+	.form
+		margin: 0 auto
+		width: 90%
+
 
 
 /* Custom, iPhone Retina */
