@@ -1,0 +1,584 @@
+@import vars
+@import fonts
+@import libs
+@import mixin
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+*
+	box-sizing: border-box
+	// border: 1px solid rgba(255,255,255,0.5)
+body
+	margin: 0
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	background: #151515
+.bg
+	background: #151515 url(../img/@1x/background.png) center -30px no-repeat
+	background-size: cover
+	position: absolute
+	width: 100%
+	min-height: 100vh
+	z-index: -1
+
+// Custom Sass
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.wrapper
+	display: block
+	margin: 0 auto
+	padding: 0 15px
+	max-width: 1170px
+.header
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 66px
+	// position: relative
+	&::after
+		content: ""
+		background: linear-gradient(90deg,rgba(0, 51, 102, 0.97),rgba(51, 51, 51, 0.97), rgba(102, 0, 51, 0.97)), url("https://giganika.com/images/articles/whiten.png")
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 66px
+		z-index: -1
+
+	&__logo
+		font-weight: bold
+		font-size: 18px
+		color: white
+
+	&__menu
+
+	&__more
+	&__bottom
+		&-bg
+			background-color: rgba(34, 34, 34, .4)
+			position: absolute
+			left: 0
+			width: 100%
+			height: 80px
+			z-index: -1
+.content-header-bottom
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	height: 80px
+.logo
+
+	&__red
+		color: #cc3366
+
+.menu
+	list-style: none
+	display: flex
+	justify-content: space-around
+	padding: 0
+	&__item
+		padding: 0px 22px
+		line-height: 40px
+		// &:first-child
+		// 	padding-left: 0
+		// &:last-child
+		// 	padding-right: 0
+		&:not(:first-child)
+			// border-left: 1px dashed #333366
+			border-left: 1px dashed rgba(255,255,255,.10)
+	&__link
+		font-family: 'Roboto' , sans-serif
+		font-weight: 400
+		color: white
+		font-size: 14px
+		text-decoration: none
+		&:hover
+			color: $accent2
+			text-decoration: none
+		&--activ
+			color: $accent2
+.more
+	border-left: 1px dashed rgba(255,255,255,.10)
+	border-right: 1px dashed rgba(255,255,255,.10)
+	padding: 0 20px
+	color: white
+	text-align: center
+	position: relative
+	&__button
+		&:hover
+			// color: #db3259
+		&-activ
+			color: #db3259
+	&__text
+		text-transform: uppercase
+		font-size: 12px
+	&__icon
+		font-size: 25px
+		display: block
+		margin: 0 auto
+	&__menu-list
+		position: absolute
+		right: 0
+		z-index: 6
+		min-width: 290px
+		width: 50vw
+		max-width: 320px
+	&__menu-hidden
+		display: none
+.menu-more
+	text-align: left
+	list-style: none
+	padding: 0
+	&__item
+		background: #1a506c
+		&:hover
+			background: #154056
+		
+	&__link
+		display: block
+		margin-left: 15px
+		margin-right: 15px
+		padding: 20px 10px
+		color: white
+		text-decoration: none
+.menu-more__item:not(:last-child) .menu-more__link
+		border-bottom: 1px solid white
+
+.event-date
+	display: flex
+	&__button
+		color: white
+		background: $accent2
+		border: none
+		padding: 15px 30px
+		border-radius: 5px
+		font-size: 14px
+		transition: 1.5s
+		&:hover
+			background: #cc3333
+			cursor: pointer
+		&-margin
+			margin: 0 7px
+.b-calendar
+	position: relative
+	&__text
+		color: white
+		background: $accent2
+		border: none
+		padding: 15px 30px
+		border-radius: 5px
+		font-size: 14px
+		transition: 1.5s
+		&:hover
+			background: #cc3333
+			cursor: pointer
+	&__calendar
+		width: 250px
+		position: absolute
+		z-index: 5
+		transform: translate(-10%,25%)
+		top: 0px
+		left: 0px
+	&__hidden
+		display: none
+.slider-team-header
+	display: flex
+	align-items: center
+	&__owl-carousel
+		max-width: 550px
+	&__prev-btn
+		width: 25px
+		text-align: center
+		line-height: 25px
+		background: #cc3366
+		border-radius: 50%
+		color: white
+		cursor: pointer
+		margin-right: 10px
+	&__next-btn
+		width: 25px
+		text-align: center
+		line-height: 25px
+		background: #cc3366
+		border-radius: 50%
+		color: white
+		cursor: pointer
+		margin-left: 10px
+	&__item
+		// width: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid white
+		border-radius: 50%
+		width: 50px
+		height: 50px
+	&__img
+		// display: block
+		max-width: 100%
+		height: auto
+
+// End Head
+	
+.breadcrumbs
+	margin: 15px 0
+	color: white
+	font-size: 13px
+	&__link
+		display: inline
+		&:not(:first-child)::before
+			margin: 0px 4px
+			font-family: "Font Awesome 5 Free"
+			font-weight: 900
+			content: "\f054"
+			font-size: 12px
+
+.container
+	display: flex
+	// justify-content: space-between
+	justify-content: center
+	flex-wrap: wrap
+	&__content
+		margin-right: 15px
+		max-width: 750px
+		width: 100%
+	&__sidebar
+		margin-left: 15px
+		margin-top: 50px
+.content
+	&__items-event
+		// max-width: 750px
+		width: 100%
+		margin-bottom: 5px
+		padding: 30px 0
+	&__more-event
+		width: 100%
+		border-radius: 5px
+
+.more-event
+	background: #cc3366
+	text-align: center
+	line-height: 55px
+	&__link
+		font-size: 14px
+		color: white
+		text-decoration: none
+		&:hover
+			color: #333
+			text-decoration: none
+
+.items-event
+	background: white
+	display: flex
+	justify-content: space-between
+	// justify-content: space-around
+	color: black
+	&__img
+		text-align: center
+		width: 145px
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			background: #ccccff
+			width: 1px
+			height: 100%
+			// display: inline-block
+
+	&__img_responsive
+		max-width: 100%
+		height: auto
+	&__content
+		width: 390px
+		margin-left: 25px
+	&__title-team
+		font-size: 18px
+		font-weight: bold
+		color: #333
+		margin-bottom: 15px
+
+	&__date
+		color: #999
+		font-size: 13px
+		font-weight: 200
+	&__content-prediction
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 20px
+		width: 250px
+	&__name-prediction
+		font-size: 14px
+		color: #333
+	&__coefficient
+		padding: 10px 20px
+		background: #1a506c
+		color: white
+		border-radius: 5px
+		border: none
+	&__prediction
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: center
+		margin-right: 25px
+	&__button
+		background: #c36
+		padding: 15px 30px
+		color: white
+		border-radius: 5px
+		border: none
+// Express
+
+.express-event
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	&:after 
+		content: ''
+		display: block //хак чтобы space-between работал как space-evenly, в ie он не работает
+	flex-wrap: wrap
+	width: 100%
+.express-teams
+	flex: 1 1 75%
+.express-team
+	/* .express-team__item */
+	&__item
+		
+
+.team-prognosis
+	display: flex
+	flex-direction: row
+	// padding: 25px 0 
+	border-right: 1px solid #ccccff
+	&:not(:first-child)
+		padding-top: 25px	
+	&:not(:last-child)
+		padding-bottom: 25px
+		border-bottom: 1px solid #ccccff
+	&__img
+		text-align: center
+		width: 145px
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			background: #ccccff
+			width: 1px
+			height: 100%
+			// display: inline-block
+
+	&__img_responsive
+		max-width: 100%
+		height: auto
+
+	/* .team-prognosis__content */
+	&__content
+		// width: 390px
+		margin-left: 25px
+		margin-right: 40px
+.team-prognosis-content
+	/* .team-prognosis-content__title */
+	&__title
+		font-size: 18px
+		font-weight: bold
+		color: #333
+		margin-bottom: 15px
+	/* .team-prognosis-content__date */
+	&__date
+		color: #999
+		font-size: 13px
+		font-weight: 200
+	/* .team-prognosis-content__coeff */
+	&__coeff
+
+.content-coeff
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-top: 20px
+	width: 250px
+	/* .content-coeff__title-win */
+	&__title-win
+		font-size: 14px
+		color: #333
+	/* .content-coeff__btn */
+	&__btn
+		padding: 10px 20px
+		background: #1a506c
+		color: white
+		border-radius: 5px
+		border: none
+.select-event
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	flex: 1 1 25%
+	// margin-right: 25px
+	/* .select-event__title */
+	&__title
+		color: #3b3b3b
+		margin-bottom: 15px
+		font-size: 30px
+		font-weight: bold
+	/* .select-event__button */
+	&__button
+		background: #c36
+		padding: 15px 30px
+		color: white
+		border-radius: 5px
+		border: none
+
+// End Express
+.sidebar
+	width: 360px
+	/* .sidebar__subscribe */
+	&__subscribe
+		margin-bottom: 5px
+	/* .sidebar__news */
+	&__news
+		margin-bottom: 5px
+
+.subscribe
+	background: #1a506c
+	color: white
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 30px 25px
+	/* .subscribe__title */
+	&__title
+		font-size: 18px
+		font-weight: 500
+	/* .subscribe__subtitle */
+	&__subtitle
+		font-size: 14px
+		margin-top: -5px
+	/* .subscribe__form */
+	&__form
+		margin-top: 23px
+		display: flex
+		align-items: flex-start
+	/* .subscribe__input */
+	&__input
+		width: 270px
+		// height: 40px
+		border-radius: 5px 0 0 5px
+		border: none
+		padding: 15px 18px
+		font-size: 13px
+		color: #999999
+		// line-height: 40px
+	/* .subscribe__button */
+	&__button
+		background: #cc3366
+		border: none
+		color: white
+		padding: 11px
+		font-size: 14px
+		font-weight: 800
+		border-radius: 0 5px 5px 0
+
+.news
+	display: flex
+	background: white
+	justify-content: space-between
+	align-items: center
+	/* .news__text */
+	&__text
+		flex: 1
+		padding: 5px 20px
+		// padding-bottom: 5px
+		// padding: 25px 20px 5px 20px
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+	/* .news__title */
+	&__title
+		color: #333
+		font-size: 15px
+		font-weight: 500
+	/* .news__date */
+	&__date
+		// margin-top: 15px
+		font-size: 13px
+		font-weight: 200
+		color: #999
+	/* .news__img */
+	&__img
+		// display: block
+		// flex-basis: 120px
+		// flex-grow: 2
+		// width: 120px
+.img-news
+	position: relative
+	&__responsive
+		display: block
+		width: 100%
+		min-width: 120px
+		height: auto
+	&__icon_video
+		&::before
+			content: url("../img/@2x/icon-video-play.png")
+			display: block
+			position: absolute
+			top: 10px
+			right: 7px
+			width: 40px
+			height: 40px
+				
+.bottom-text
+	margin-top: 45px
+	&__title
+		color: white
+		font-size: 18px
+		font-weight: 800
+	&__text
+		margin-bottom: 30px
+		color: white
+		font-size: 14px
+		font-weight: 200
+
+.footer
+	&--bg
+		background: #0c364a
+		width: 100%
+		height: 100px
+	&--wrapper
+		@include wrapper
+	&__section
+		height: 100px
+		color: white
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&__text
+			margin-top: 10px

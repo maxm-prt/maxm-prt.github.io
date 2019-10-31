@@ -1,0 +1,415 @@
+// @import bourbon
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	
+	.content
+		/* .content__items-event */
+		&__items-event
+	.header
+		/* .header__bottom */
+		&__bottom
+
+		/* .header__bottom-bg */
+		&__bottom-bg
+
+	.content-header-bottom
+		/* .content-header-bottom__event-date */
+		&__event-date
+
+		/* .content-header-bottom__slider-team-header */
+		&__slider-team-header
+
+
+	.event-date
+		/* .event-date__button */
+		&__button
+
+		/* .event-date__button-margin */
+		&__button-margin
+
+	.slider-team-header
+		/* .slider-team-header__prev-btn */
+		&__prev-btn
+
+		/* .slider-team-header__owl-carousel */
+		&__owl-carousel
+			max-width: 400px
+		/* .slider-team-header__item */
+		&__item
+
+		/* .slider-team-header__img */
+		&__img
+
+		/* .slider-team-header__next-btn */
+		&__next-btn
+
+
+	.items-event
+		// flex-wrap: wrap
+		/* .items-event__img */
+		&__img
+
+		/* .items-event__img_responsive */
+		&__img_responsive
+
+		/* .items-event__content */
+		&__content
+
+		/* .items-event__title-team */
+		&__title-team
+
+		/* .items-event__date */
+		&__date
+
+		/* .items-event__content-prediction */
+		&__content-prediction
+
+		/* .items-event__name-prediction */
+		&__name-prediction
+
+		/* .items-event__coefficient */
+		&__coefficient
+
+		/* .items-event__prediction */
+		&__prediction
+
+		/* .items-event__button */
+		&__button
+	.container__sidebar, .container__content
+		margin-right: 0
+		margin-left: 0
+	.sidebar
+		width: 100%
+		max-width: 750px
+	.subscribe
+		/* .subscribe__title */
+		&__title
+
+		&__subtitle
+
+		&__form
+			margin-top: 23px
+			display: flex
+			align-items: flex-start
+		/* .subscribe__input */
+		&__input
+			width: 100%
+			min-width: 250px
+			// height: 40px
+			border-radius: 5px 0 0 5px
+			border: none
+			padding: 15px 18px
+			font-size: 13px
+			color: #999999
+			// line-height: 40px
+		/* .subscribe__button */
+		&__button
+			background: #cc3366
+			border: none
+			color: white
+			padding: 11px
+			font-size: 14px
+			font-weight: 800
+			border-radius: 0 5px 5px 0
+
+// Custrom 
+/* Medium Devices, Desktops */
+/*@media only screen and (max-width : 992px)*/
+	/**/
+@media only screen and (max-width : 1050px)
+	.container
+		justify-content: center
+		flex-wrap: wrap
+		&__content
+			margin-right: 0px
+		&__sidebar
+			margin-left: 0px
+	.header
+		/* .header__bottom */
+		&__bottom
+			height: auto
+
+		/* .header__bottom-bg */
+		&__bottom-bg
+			height: 150px
+	.menu
+		display: none
+	.content-header-bottom
+		flex-direction: column
+		justify-content: space-around
+		align-items: center
+		flex-wrap: nowrap
+		height: 150px
+
+		&__event-date
+			// padding: 5px
+			width: 100%
+			justify-content: space-around
+		&__slider-team-header
+
+	.event-date
+		/* .event-date__button */
+		&__button
+
+		/* .event-date__button-margin */
+		&__button-margin
+	.b-calendar
+		&__calendar
+			transform: translate(10%,25%)
+			top: 0px
+			left: auto
+			right: 0
+	.slider-team-header
+		/* .slider-team-header__prev-btn */
+		&__prev-btn
+
+		/* .slider-team-header__owl-carousel */
+		&__owl-carousel
+
+		/* .slider-team-header__item */
+		&__item
+
+		/* .slider-team-header__img */
+		&__img
+
+		/* .slider-team-header__next-btn */
+		&__next-btn
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.event-date
+		&__button
+			padding: 10px 15px
+	.slider-team-header
+		&__owl-carousel
+			max-width: 260px
+	.items-event
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		/* .items-event__img */
+		&__img
+			&::after
+				background: none
+		/* .items-event__img_responsive */
+		&__img_responsive
+
+		/* .items-event__content */
+		&__content
+			margin-left: 0px
+			width: auto
+			text-align: center
+			// margin: 0
+			justify-content: center
+			align-items: center
+		/* .items-event__title-team */
+		&__title-team
+
+		/* .items-event__date */
+		&__date
+
+		/* .items-event__content-prediction */
+		&__content-prediction
+			margin-left: 0
+			flex-direction: row
+			width: auto
+			justify-content: space-around
+		/* .items-event__name-prediction */
+		&__name-prediction
+
+		/* .items-event__coefficient */
+		&__coefficient
+
+		/* .items-event__prediction */
+		&__prediction
+			margin-top: 20px
+			margin-right: 0px
+			flex-direction: row
+			justify-content: center
+			width: auto
+			// border-top: 1px solid #ccf
+		/* .items-event__button */
+		&__button
+
+	.mob-hidden
+		display: none
+	
+
+
+	.content
+		/* .content__items-event */
+		&__items-event
+
+	.items-event
+
+	.express-event
+		flex-direction: column
+		justify-content: space-around
+		&:before,
+		&:after 
+			content: ''
+			display: none
+
+	.express-teams
+		flex: 0
+		margin: auto
+	.express-team
+		/* .express-team__item */
+		&__item
+			
+
+	.team-prognosis
+		// flex-direction: column
+		// flex-wrap: wrap
+		margin: auto
+		align-items: center
+		border-right: none
+		padding-bottom: 25px
+		/* .team-prognosis__img */
+		&__img
+
+		/* .team-prognosis__img_responsive */
+		&__img_responsive
+
+		/* .team-prognosis__content */
+		&__content
+
+	.team-prognosis-content
+		/* .team-prognosis-content__title */
+		&__title
+
+		/* .team-prognosis-content__date */
+		&__date
+
+		/* .team-prognosis-content__coeff */
+		&__coeff
+
+	.content-coeff
+		/* .content-coeff__title-win */
+		&__title-win
+
+		/* .content-coeff__btn */
+		&__btn
+
+	.select-event
+		flex: 0
+		margin-top: 25px
+		flex-direction: row
+		justify-content: space-around
+		width: 100%
+		/* .select-event__title */
+		&__title
+
+		/* .select-event__button */
+		&__button
+
+
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+@media only screen and (max-width : 620px)
+	.team-prognosis
+		flex-direction: column
+		text-align: center
+		// flex-wrap: wrap
+		margin: auto
+		align-items: center
+		padding-left: 10px
+		padding-right: 10px
+		border-right: none
+		padding-bottom: 25px
+		border-bottom: 1px solid #ccccff
+		/* .team-prognosis__img */
+		&__img
+			&::after
+				content: ""
+				position: none
+				right: 0
+				top: 0
+				background: none
+				width: 0
+				height: 0
+				// display: inline-block
+
+		/* .team-prognosis__img_responsive */
+		&__img_responsive
+
+		/* .team-prognosis__content */
+		&__content
+			margin: 0
+
+	.team-prognosis-content
+		/* .team-prognosis-content__title */
+		&__title
+
+		/* .team-prognosis-content__date */
+		&__date
+		/* .team-prognosis-content__coeff */
+		&__coeff
+	.content-coeff
+		margin: 20px auto auto auto
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.more
+		&__menu-list
+			// width: 290px
+	.slider-team-header
+		&__owl-carousel
+			max-width: 190px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
