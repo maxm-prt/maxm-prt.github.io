@@ -1,0 +1,130 @@
+// @import bourbon
+@function col($column, $columns: 12)
+	@return 100% / $columns * $column
+@mixin padding-two-block-content($px)
+	padding-bottom: $px
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	// 
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	// Main block
+	.two-section
+		/* .two-section__img */
+		&__img
+			
+		/* .two-section__content */
+		&__content
+			
+		/* .two-section__title */
+		&__title
+			font-size: 30px
+			
+		/* .two-section__sign */
+	
+	.item
+		// width: col(3)
+		min-width: 200px
+		
+	.what-in-box
+		/* .what-in-box__main */
+		&__main
+
+		/* .what-in-box__title */
+		&__title
+
+		/* .what-in-box__subtitle */
+		&__subtitle
+
+		/* .what-in-box__content */
+		&__content
+			align-items: center
+			margin-top: 60px
+		&__center-img
+			margin: 0 auto
+		/* .what-in-box__item */
+		&__b-left 
+			flex-basis: col(4)
+			& .what-in-box__item
+				text-align: right
+				align-items: flex-end
+
+		&__b-center 
+			flex-basis: col(3)
+			margin: 0 auto
+			& .what-in-box__item
+
+		&__b-right 
+			flex-basis: col(4)
+			& .what-in-box__item
+				text-align: left
+				align-items: flex-start
+		& .what-in-box__item
+			padding: 25px
+			&:hover
+				padding: 23px
+				border: 2px solid #e72867
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
